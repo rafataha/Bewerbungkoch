@@ -177,8 +177,8 @@
     padding: 90px 0;
     border-bottom: 1px solid var(--beige-mid);
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(36px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   section.visible {
@@ -270,6 +270,23 @@
     font-weight: 400;
     color: var(--ink);
     margin-bottom: 4px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .erfahrung-role::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .erfahrung-item:hover .erfahrung-role::after {
+    width: 100%;
   }
 
   .erfahrung-company {
@@ -359,6 +376,12 @@
     padding: 32px;
     position: relative;
     overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  }
+
+  .kompetenz-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -20px rgba(30, 26, 21, 0.25);
   }
 
   .kompetenz-card::before {
@@ -512,11 +535,11 @@
       <h2 class="section-title">Warum <em>ich</em>?</h2>
       <p class="intro-text">
         Sehr geehrte Damen und Herren,<br><br>
-        Kochen ist für mich keine Tätigkeit — es ist eine <strong>Berufung</strong>. Mit 18 Jahren bringe ich bereits praktische Erfahrung in der professionellen Gastronomie mit, eine tiefe Leidenschaft für Lebensmittel und die aufrichtige Überzeugung, dass ein gutes Gericht Geschichten erzählen kann.
+        Kochen ist für mich keine Tätigkeit — es ist eine <strong>Berufung</strong>. Mit 19 Jahren bringe ich bereits praktische Erfahrung in der professionellen Gastronomie mit, ein geschultes Auge für Details und die aufrichtige Überzeugung, dass ein gutes Gericht Geschichten erzählen kann.
         <br><br>
-        Ich suche einen Platz in einer Küche, wo Sorgfalt, Disziplin und Kreativität täglich gefragt sind. Meine Mehrsprachigkeit — Deutsch, Englisch, Arabisch und Französisch — erlaubt mir, mich schnell in internationalen Teams zu integrieren. Ich lerne schnell, arbeite präzise und bringe immer <strong>100 % Einsatz</strong> mit.
+        Ich suche einen Platz in einer Küche, in der Sorgfalt, Disziplin und Kreativität täglich gefragt sind — und in der man sich weiterentwickeln darf. Meine Mehrsprachigkeit in Deutsch, Englisch, Arabisch und Französisch hilft mir, mich schnell in internationale Teams einzufinden. Ich lerne zügig, arbeite präzise und bringe immer <strong>vollen Einsatz</strong> mit.
         <br><br>
-        Ich würde mich sehr freuen, Ihr Team kennenzulernen und meine Fähigkeiten unter Beweis zu stellen.
+        Über die Gelegenheit, Ihr Team persönlich kennenzulernen und meine Fähigkeiten unter Beweis zu stellen, würde ich mich sehr freuen.
       </p>
       <p class="intro-signature">— Taha Rafa</p>
     </div>
@@ -528,7 +551,7 @@
       <p class="section-label">Über mich</p>
       <h2 class="section-title">Berufliches <em>Profil</em></h2>
       <p class="profil-text">
-        Engagierter Koch mit praktischer Erfahrung in der Küchenorganisation und Zubereitung. Solide Kenntnisse in Hygiene, Lebensmittelvorbereitung und Serviceunterstützung. Teamfähig, schnell lernfähig und belastbar. Motiviert, meine Kenntnisse und Fähigkeiten in einem professionellen Umfeld weiterzuentwickeln und einzusetzen.
+        Engagierter Koch mit praktischer Erfahrung in Küchenorganisation und Zubereitung, gepaart mit einem sicheren Gespür für Hygiene- und Qualitätsstandards. Teamorientiert, aufmerksam und belastbar — auch wenn es in der Küche hoch hergeht. Bereit, mich in einem professionellen Umfeld weiterzuentwickeln und mit vollem Einsatz einzubringen.
       </p>
     </div>
   </section>
@@ -546,7 +569,7 @@
             <p class="erfahrung-role">Küchenpraktikant</p>
             <p class="erfahrung-company">Pesca del Dia</p>
             <p class="erfahrung-desc">
-              Dreimonatiges Praktikum in einem professionellen Restaurantbetrieb. Unterstützung des Küchenteams bei der Vorbereitung der Zutaten und dem Anrichten der Speisen. Verantwortlich für Sauberkeit am Arbeitsplatz sowie die Einhaltung der Hygienevorschriften. Mitgewirkt bei der Organisation von Events und für reibungslose Abläufe in der Küche auch bei hohem Betrieb gesorgt.
+              Dreimonatiges Praktikum in einem professionellen Restaurantbetrieb: Unterstützung des Küchenteams bei Zutatenvorbereitung und Anrichten der Speisen, konsequente Einhaltung der Hygienevorschriften und Verantwortung für einen sauberen Arbeitsplatz. Bei der Organisation von Events mitgewirkt und auch bei hohem Betrieb für reibungslose Abläufe gesorgt.
             </p>
           </div>
           <div class="erfahrung-meta">
@@ -560,7 +583,7 @@
             <p class="erfahrung-role">Sportanimateur</p>
             <p class="erfahrung-company">Société Ludiciel — Hotel The View</p>
             <p class="erfahrung-desc">
-              Motivation und Anleitung der Hotelgäste zur aktiven Teilnahme an den angebotenen Sportarten und Animationsprogrammen. Förderung eines positiven Teamgeistes und Stärkung der Gästezufriedenheit im Rahmen des Hotelangebots.
+              Hotelgäste zur aktiven Teilnahme an Sport- und Animationsprogrammen motiviert und angeleitet. Für gute Stimmung im Team gesorgt und aktiv zur Gästezufriedenheit beigetragen.
             </p>
           </div>
           <div class="erfahrung-meta">
@@ -574,7 +597,7 @@
             <p class="erfahrung-role">Schiedsrichter-Anwärter</p>
             <p class="erfahrung-company">Regionaler Schiedsrichterverband</p>
             <p class="erfahrung-desc">
-              Mitglied eines regionalen Schiedsrichterverbands mit der Perspektive, als offizieller Schiedsrichter zugelassen zu werden. Entwicklung von Regelkenntnissen, Entscheidungsfindung unter Druck und professionellem Auftreten im Sportumfeld.
+              Mitglied eines regionalen Schiedsrichterverbands mit Aussicht auf die offizielle Zulassung als Schiedsrichter. Regelkenntnis, souveräne Entscheidungsfindung unter Druck und sicheres Auftreten im Sportumfeld ausgebaut.
             </p>
           </div>
           <div class="erfahrung-meta">
@@ -670,10 +693,10 @@
       <div class="ausbildung-item">
         <div>
           <p class="ausbildung-school">Lycée Abidar Elghifari</p>
-          <p class="ausbildung-abschluss">Erwarteter Abschluss: Juni 2026</p>
+          <p class="ausbildung-abschluss">Abitur erfolgreich abgeschlossen — Juli 2026</p>
         </div>
         <div class="erfahrung-meta">
-          <p class="erfahrung-period">Sept. 2022 — Aktuell</p>
+          <p class="erfahrung-period">Sept. 2022 — Juli 2026</p>
           <p class="erfahrung-ort">Rabat, Marokko</p>
         </div>
       </div>
@@ -691,7 +714,7 @@
     <a href="mailto:businessrafataha@gmail.com">businessrafataha@gmail.com</a>
   </div>
   <div class="footer-line"></div>
-  <p class="footer-copy">Verfügbar für Stellen in Deutschland &nbsp;·&nbsp; Geb. 12. Juli 2007</p>
+  <p class="footer-copy">Verfügbar für Stellen in Deutschland &nbsp;·&nbsp; 19 Jahre</p>
 </footer>
 
 <script>
